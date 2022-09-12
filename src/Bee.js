@@ -8,24 +8,15 @@
  a food property that is inherited from grub
  an eat method that is inherited from grub
  a job property that is set to keep on growing
-
- var Grub = function() {
-  this.age = 0;
-  this.color = 'pink';
-  this.food = 'jelly';
-};
-we have an object grub.prototype
-Grub.prototype.eat = function() {
-  return this.food;
-};
 */
 var Bee = function() {
   Grub.call(this);
   this.age = 5;
-  this.color = "yellow";
-  this.job = "keep on growing";
+  this.color = 'yellow';
+  this.job = 'keep on growing';
 };
 
 Bee.prototype = Object.create(Grub.prototype);
 Bee.prototype.constructor = Bee;
 
+console.log(Bee);
